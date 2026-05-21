@@ -6,7 +6,11 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
 
-dependencies = []
+dependencies = [
+    "numpy",
+    "pandas",
+    "yfinance",
+]
 
 [dependency-groups]
 dev = [
@@ -18,6 +22,7 @@ dev = [
     "mkdocs",
     "mkdocs-material",
     "mkdocstrings[python]",
+    "pandas-stubs",
 ]
 
 [build-system]
@@ -42,6 +47,10 @@ testpaths = ["tests"]
 python_version = "3.11"
 strict = true
 mypy_path = "src"
+
+[[tool.mypy.overrides]]
+module = ["yfinance"]
+ignore_missing_imports = true
 
 [tool.coverage.run]
 source = ["src"]
