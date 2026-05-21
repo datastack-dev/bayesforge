@@ -48,5 +48,9 @@ python_version = "3.11"
 strict = true
 mypy_path = "src"
 
+[[tool.mypy.overrides]]
+module = ["yfinance"]
+ignore_missing_imports = true
+
 [tool.coverage.run]
 source = ["src"]
