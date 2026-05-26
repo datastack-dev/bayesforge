@@ -1,6 +1,5 @@
 import numpy as np
-import pandas as pd
-import yfinance as yf
+
 from bayesforge.data.load import get_data
 
 def get_daily_return(
