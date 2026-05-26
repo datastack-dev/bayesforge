@@ -2,6 +2,7 @@ import numpy as np
 
 from bayesforge.data.load import get_data
 
+
 def get_daily_return(
     ticker:str,
     horizon:str,
